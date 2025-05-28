@@ -1,0 +1,39 @@
+{
+  "name": "amp-manager",
+  "version": "1.0.0",
+  "description": "A visual manager for multiple Amp CLI instances using tmux",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "amp-manager": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/index.js",
+    "dev": "ts-node src/index.tsx",
+    "watch": "tsc --watch"
+  },
+  "keywords": ["amp", "cli", "manager", "tmux", "parallel"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ink": "^5.0.1",
+    "react": "^18.2.0",
+    "ink-spinner": "^5.0.0",
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.1.1",
+    "node-pty": "^1.0.0",
+    "ws": "^8.14.2",
+    "uuid": "^9.0.1",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "@types/react": "^18.2.25",
+    "@types/fs-extra": "^11.0.2",
+    "@types/ws": "^8.5.7",
+    "@types/uuid": "^9.0.5",
+    "typescript": "^5.2.2",
+    "ts-node": "^10.9.1"
+  }
+} 
