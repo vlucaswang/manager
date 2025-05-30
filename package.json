@@ -8,10 +8,15 @@
     "amp-manager": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "npm run build && node dist/index.js",
-    "dev": "ts-node src/index.tsx",
-    "watch": "tsc --watch"
+    "build": "bun run build:tsc",
+    "build:tsc": "tsc",
+    "start": "bun run build && node dist/index.js",
+    "dev": "bun --bun tsx src/index.tsx",
+    "watch": "tsc --watch",
+    "docker:build": "docker build -t amp-manager .",
+    "docker:run": "docker-compose up",
+    "test": "bun test tests/",
+    "test:watch": "bun test tests/ --watch"
   },
   "keywords": ["amp", "cli", "manager", "tmux", "parallel"],
   "author": "",
@@ -22,7 +27,6 @@
     "ink-spinner": "^5.0.0",
     "chalk": "^5.3.0",
     "fs-extra": "^11.1.1",
-    "node-pty": "^1.0.0",
     "ws": "^8.14.2",
     "uuid": "^9.0.1",
     "commander": "^11.1.0"
@@ -34,6 +38,6 @@
     "@types/ws": "^8.5.7",
     "@types/uuid": "^9.0.5",
     "typescript": "^5.2.2",
-    "ts-node": "^10.9.1"
+    "tsx": "^4.7.0"
   }
 } 
