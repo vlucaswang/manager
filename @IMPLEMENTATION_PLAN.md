@@ -40,11 +40,10 @@
 
 ### Next Steps
 
-1. ✅ Create Docker environment for consistent builds
-2. ✅ Remove node-pty dependency and fix compilation 
-3. ✅ Complete TypeScript build setup
-4. ✅ Implement core components (All components fully implemented!)
-5. 🚧 Fix test suite issues:
+1. ✅ Remove node-pty dependency and fix compilation 
+2. ✅ Complete TypeScript build setup
+3. ✅ Implement core components (All components fully implemented!)
+4. 🚧 Fix test suite issues:
    - Mock fs.mkdir properly for TmuxManager
    - Fix ControlSocket close() method
    - Update AmpLogMonitor API methods
@@ -58,10 +57,10 @@
 3. **AmpLogMonitor**: Missing public methods (`start`, `stop`, `getLastActivity`)
 4. **Mocking Problems**: Need proper mocks for fs, WebSocket, child_process
 
-### Docker Priority
+### Build Environment
 
-Creating Docker container first to:
-- Avoid native compilation issues
-- Ensure consistent environment across platforms
-- Include tmux and all required dependencies
-- Support amp CLI installation and authentication
+Native development environment with:
+- Node.js v22+ and bun package manager
+- TypeScript compilation working
+- All dependencies installed successfully
+- tmux and amp CLI available in system PATH

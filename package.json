@@ -13,8 +13,6 @@
     "start": "bun run build && node dist/index.js",
     "dev": "bun --bun tsx src/index.tsx",
     "watch": "tsc --watch",
-    "docker:build": "docker build -t amp-manager .",
-    "docker:run": "docker-compose up",
     "test": "bun test tests/",
     "test:watch": "bun test tests/ --watch"
   },
